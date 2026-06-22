@@ -24,3 +24,6 @@ Contiene la versión final del sistema NutriHealth. En esta versión se integrar
 - Morales Hernández Roberto Carlos
 - Moran Diaz Barriga Jorge
 
+---
+Repositorio correspondiente a la entrega del proyecto final.
+
