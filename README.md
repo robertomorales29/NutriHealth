@@ -23,3 +23,4 @@ Contiene la versión final del sistema NutriHealth. En esta versión se integrar
 - Hernandez Saucedo Axel Ariel
 - Morales Hernández Roberto Carlos
 - Moran Diaz Barriga Jorge
+
