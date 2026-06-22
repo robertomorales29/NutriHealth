@@ -1,0 +1,207 @@
+:root {
+    --nh-green: #16a34a;
+    --nh-green-dark: #0f7a37;
+    --nh-blue: #0ea5e9;
+    --nh-blue-dark: #0369a1;
+    --nh-soft: #f4fbf7;
+    --nh-text: #10202f;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #f7fffb 0%, #eef8ff 50%, #ffffff 100%);
+    color: var(--nh-text);
+}
+
+.main-content {
+    min-height: calc(100vh - 135px);
+}
+
+.brand-icon {
+    width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: linear-gradient(135deg, var(--nh-green), var(--nh-blue));
+    border-radius: 12px;
+}
+
+.hero-section {
+    background: radial-gradient(circle at top left, rgba(22, 163, 74, .20), transparent 30%),
+                radial-gradient(circle at bottom right, rgba(14, 165, 233, .18), transparent 35%),
+                #ffffff;
+    border-radius: 34px;
+    overflow: hidden;
+}
+
+.hero-badge {
+    background: rgba(22, 163, 74, .12);
+    color: var(--nh-green-dark);
+    border: 1px solid rgba(22, 163, 74, .18);
+}
+
+.btn-nh {
+    background: linear-gradient(135deg, var(--nh-green), var(--nh-blue));
+    border: none;
+    color: #fff;
+}
+
+.btn-nh:hover {
+    color: #fff;
+    filter: brightness(.95);
+}
+
+.card-soft {
+    background: rgba(255, 255, 255, .88);
+    border: 1px solid rgba(15, 122, 55, .08);
+    box-shadow: 0 20px 60px rgba(2, 47, 74, .08);
+    border-radius: 24px;
+}
+
+.news-slide {
+    min-height: 330px;
+    border-radius: 28px;
+    padding: 42px;
+    color: #fff;
+    background-image: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)), url("../img/nutricion.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.news-slide.slide-two {
+    background-image: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)), url("../img/ejercicio.jpg");
+}
+
+.news-slide.slide-three {
+    background-image: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)), url("../img/seguimiento.jpg");
+}
+
+.role-card {
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+.role-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(3, 105, 161, .12);
+}
+
+.stat-circle {
+    --circle-progress: 0%;
+    --circle-color: var(--nh-green);
+    --circle-track: rgba(14, 165, 233, .14);
+    width: 148px;
+    height: 148px;
+    border-radius: 50%;
+    background: conic-gradient(
+        var(--circle-color) 0 var(--circle-progress),
+        var(--circle-track) var(--circle-progress) 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 14px;
+    position: relative;
+    transition: background .35s ease, transform .2s ease;
+}
+
+.stat-circle:hover {
+    transform: scale(1.025);
+}
+
+.stat-circle--success { --circle-color: var(--nh-green); }
+.stat-circle--info { --circle-color: var(--nh-blue); }
+.stat-circle--warning { --circle-color: #f59e0b; }
+.stat-circle--danger { --circle-color: #dc2626; }
+.stat-circle--accent { --circle-color: #f97316; }
+.stat-circle--muted { --circle-color: #94a3b8; }
+
+.stat-circle::before {
+    content: '';
+    position: absolute;
+    width: 116px;
+    height: 116px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.stat-circle .stat-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.stat-circle .stat-number {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: var(--nh-blue-dark);
+    line-height: 1;
+}
+
+.stat-circle .stat-label {
+    font-size: .78rem;
+    color: #64748b;
+}
+
+.stat-circle .stat-scale {
+    margin-top: 4px;
+    font-size: .66rem;
+    font-weight: 700;
+    color: var(--circle-color);
+}
+
+.stat-circle .stat-number--text {
+    max-width: 96px;
+    margin-inline: auto;
+    font-size: 1.15rem;
+    overflow-wrap: anywhere;
+}
+
+.dashboard-hero {
+    background: linear-gradient(135deg, rgba(22, 163, 74, .12), rgba(14, 165, 233, .16));
+    border-radius: 26px;
+}
+
+.table thead th {
+    color: #0f172a;
+    background: #eefbf4;
+}
+
+.badge-role {
+    background: rgba(14, 165, 233, .12);
+    color: var(--nh-blue-dark);
+}
+
+.slot-btn input {
+    display: none;
+}
+.slot-btn span {
+    border: 1px solid rgba(3, 105, 161, .18);
+    padding: .65rem .85rem;
+    border-radius: 14px;
+    display: inline-block;
+    background: #fff;
+    cursor: pointer;
+    transition: all .15s ease;
+}
+.slot-btn input:checked + span {
+    background: linear-gradient(135deg, var(--nh-green), var(--nh-blue));
+    color: #fff;
+    border-color: transparent;
+}
+
+.footer {
+    background: #ffffff;
+    border-top: 1px solid rgba(15, 23, 42, .06);
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--nh-blue);
+    box-shadow: 0 0 0 .25rem rgba(14, 165, 233, .13);
+}
+
+@media (max-width: 767px) {
+    .news-slide { min-height: 260px; padding: 28px; }
+    .stat-circle { width: 130px; height: 130px; }
+    .stat-circle::before { width: 102px; height: 102px; }
+}
